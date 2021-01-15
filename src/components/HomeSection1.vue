@@ -1,6 +1,6 @@
 <template>
     <v-container fluid grid-list-sm>
-        <v-layout row wrap>
+        <v-layout row wrap class="main-section">
             <v-row  class="section-1">
                 <v-col cols>
                     <div class="main-img">
@@ -33,11 +33,17 @@ export default {
 </script>
 
 <style scoped>
+
+.main-section{
+ width: 100vw;
+}
+
 .section-1 {
     margin-top: -20px;
     background-image: url("../assets/main-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 .main-img img{
     max-height: 100vh;

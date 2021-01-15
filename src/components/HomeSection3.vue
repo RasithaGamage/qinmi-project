@@ -131,6 +131,8 @@ export default {
   );
 
   position: relative;
+   width: 100vw;
+
 }
 .main-img-1 {
   top: 0%;

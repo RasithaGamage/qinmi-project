@@ -1,9 +1,7 @@
 <template>
   <v-layout row wrap class="main-section">
     <v-row class="section-1">
-      <v-col cols>
-        <v-row>
-          <v-col cols="5" xs12>
+          <v-col cols="12" md="6" class="price-image">
             <div class="main-img">
               <img src="../assets/Smart Watch.H01.2k.png" />
               <v-row>
@@ -74,7 +72,7 @@
             </div>
           </v-col>
 
-          <v-col cols xs12 class="px-16 price-description">
+          <v-col cols="12" md="6" class="px-16 price-description">
             <h1>Heavy on features. Light on price.</h1>
             <br />
             <br />
@@ -86,8 +84,6 @@
             </p>
             <h1><span>just </span><span>$ </span> 500</h1>
           </v-col>
-        </v-row>
-      </v-col>
     </v-row>
   </v-layout>
 </template>
@@ -122,21 +118,26 @@ export default {
 </script>
 
 <style scoped>
+.section-1{
+    width: 100%;
+}
+
 .main-section {
   background: rgb(255, 255, 255);
-  height: fit-content;
   position: relative;
 }
 
 .main-img {
   height: 100vh;
-  width: fit-content;
+  width: 100%;
   margin: auto;
 }
 
 .main-img img {
-  height: 70vh;
+  max-height: 70vh;
+  max-width: 100%;
   margin-top: 10vh;
+  display: block;
 }
 
 .main-img img:nth-of-type(1) {
@@ -178,8 +179,14 @@ h1 span:nth-of-type(2) {
   margin: 0;
   position: relative;
 }
+
+.price-image {
+  margin-left: 20vh;
+}
+
 .price-description {
   margin-top: 10vh;
+  margin-left: -40vh;
 }
 .price-description p {
   width: 300px;
@@ -195,22 +202,41 @@ h1 span:nth-of-type(2) {
   margin-top: -20px !important;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
+  .price-image {
+    margin-left: auto;
+  }
+
   .price-description {
-    margin-top: -10vh;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .price-image {
+    margin-left: auto;
+  }
+
+  .price-description {
+    margin-left: auto;
     margin-bottom: 100px;
+    margin-top: -10vh;
   }
   .price-description h1 {
     font-size: 5vw;
   }
 
+  .price-description h1:nth-of-type(1) {
+
+  }
+
   h1 span {
-    font-size:3.8vw;
+    font-size: 3.8vw;
   }
 
   h1 span:nth-of-type(2) {
     font-size: 4vw;
   }
-
+  
 }
 </style>

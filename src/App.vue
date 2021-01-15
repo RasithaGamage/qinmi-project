@@ -9,6 +9,7 @@
 
   <v-footer
     color="blue-grey darken-4"
+    class="mt-12"
     padless
   >
     <v-row
@@ -17,7 +18,7 @@
     >
       <v-col
         class="blue-grey darken-4 lighten-2 py-4 text-center white--text"
-        cols="12"
+        cols="6"
       >
         {{ new Date().getFullYear() }} — <strong>QINMI</strong>
       </v-col>

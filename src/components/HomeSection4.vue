@@ -1,26 +1,23 @@
 <template>
   <v-layout row wrap class="main-section">
     <v-row class="section-1">
-      <v-col cols="12">
+      <v-col cols>
         <h1>Rich in technology</h1>
         <v-row>
-          <v-col>
-            <v-card
-              :loading="loading"
-              class="my-12 float-right f-card"
-              max-width="80%"
-              min-width="80%"
-            >
+          <v-col cols="12" sm="4" xs="12">
+            <v-card class="my-12 f-card rounded-xl">
               <v-card-title>Communicate With Your Kids</v-card-title>
 
               <v-card-text>
-                <v-row align="center" class="mx-0"> </v-row>
-
+                <v-row align="center"> </v-row>
+                <div class="card-icon-div">
+                  <img src="../assets/com.png" />
+                </div>
                 <div class="my-4 subtitle-1">
                   Voice Calling / Video Calling / Messaging
                 </div>
 
-                <div>
+                <div class="card-content">
                   Talk to your child and let them talk to you and your loved
                   ones anytime, anywhere. Your child can call, text, send photos
                   and voice messages to friends, grandparents, aunts, uncles and
@@ -28,13 +25,10 @@
                 </div>
               </v-card-text>
             </v-card>
-
-            <v-card
-              :loading="loading"
-              class="my-12 float-right f-card"
-              max-width="80%"
-              min-width="80%"
-            >
+            <v-card class="my-12 f-card rounded-xl">
+              <div class="card-icon-div">
+                <img src="../assets/warning-sign-png.png" />
+              </div>
               <v-card-title>SOS Function</v-card-title>
 
               <v-card-text>
@@ -44,7 +38,7 @@
                   Know if your child is in distress
                 </div>
 
-                <div>
+                <div class="card-content">
                   In an emergency your child can simply press an SOS button to
                   let you know they need help, and the watch automatically calls
                   the emergency contact setup within the App.
@@ -52,7 +46,7 @@
               </v-card-text>
             </v-card>
           </v-col>
-          <v-col>
+          <v-col cols="12" sm="4" xs="12">
             <div class="main-img">
               <img src="../assets/Smart Watch.H02.2k.png" />
               <v-row>
@@ -102,32 +96,29 @@
               </v-row>
             </div>
           </v-col>
-
-          <v-col>
-            <v-card
-              :loading="loading"
-              class="mx-auto my-12 float-left f-card-2"
-              max-width="80%"
-            >
+          <v-col cols="12" sm="4" xs="12">
+            <v-card class="my-12 f-card-2 rounded-xl">
+              <div class="card-icon-div">
+                <img src="../assets/Pedometer.png" />
+              </div>
               <v-card-title>Pedometer</v-card-title>
 
               <v-card-text>
-                <v-row align="center" class="mx-0"> </v-row>
+                <v-row align="center"> </v-row>
 
                 <div class="my-4 subtitle-1">Count steps</div>
 
-                <div>
+                <div class="card-content">
                   Keep track of how active your child is.Know your kid&#39;s
                   steps through the Pedometer feature on your Smart Phone Watch,
                   and easily set up goals for them to achieve.
                 </div>
               </v-card-text>
             </v-card>
-            <v-card
-              :loading="loading"
-              class="mx-auto my-12 float-left f-card-2"
-              max-width="80%"
-            >
+            <v-card class="my-12 f-card-2 rounded-xl">
+              <div class="card-icon-div">
+                <img src="../assets/gps.png" />
+              </div>
               <v-card-title>GPS Tracking</v-card-title>
 
               <v-card-text>
@@ -137,7 +128,7 @@
                   Track your child at Anytime, Anywhere
                 </div>
 
-                <div>
+                <div class="card-content">
                   Using the Leefine app, you can see your child&#39;s location
                   on a map at any time, anywhere in the world. Featuring full
                   GPS Tracking, even if your kid is travelling overseas, you can
@@ -284,9 +275,9 @@ export default {
   background: rgb(241, 241, 241);
   background: radial-gradient(
     circle,
-    rgb(222 252 255) 17%,
-    rgb(119 212 209) 57%,
-    rgb(98 197 207) 100%
+    rgb(0, 102, 118) 17%,
+    rgb(0, 60, 77) 57%,
+    rgb(1, 26, 33) 100%
   );
   height: fit-content;
   position: relative;
@@ -308,19 +299,62 @@ export default {
   margin: auto;
 }
 
+.f-card {
+  float: right;
+  max-width: 80%;
+  min-width: 80%;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.subtitle-1 {
+  color: rgb(223, 223, 223) !important;
+  font-family: sans-serif !important;
+}
+
+.card-content {
+  color: rgb(223, 223, 223) !important;
+  font-size: 13px;
+  font-weight: 100 !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  /* letter-spacing: 1.5px; */
+}
+
+.f-card-2 {
+  float: left;
+  max-width: 80%;
+  min-width: 80%;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  color: rgb(255, 255, 255) !important;
+}
+
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 8vw !important;
+    margin-bottom: 50px;
   }
   .f-card {
-    right: 14vw !important;
+    float: unset;
+    margin: auto;
+    max-width: 70%;
+    min-width: 70%;
   }
-
   .f-card-2 {
-    left: 8vw !important;
+    float: unset;
+    margin: auto;
+    max-width: 70%;
+    min-width: 70%;
   }
   .main-img {
+    margin-top: -10vw;
     height: auto;
+  }
+
+  .main-img img {
+    margin: auto;
+    height: auto;
+    max-width: 80%;
+    display: block;
   }
 }
 h1 {
@@ -355,5 +389,17 @@ h1 {
   width: 100%;
   padding-left: 50px;
   color: rgb(193, 193, 193);
+}
+
+.card-icon-div {
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+.card-icon-div img {
+  width: inherit;
+  height: auto;
 }
 </style>
