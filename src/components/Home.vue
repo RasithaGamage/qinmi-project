@@ -21,7 +21,7 @@ export default {
     HomeSection2,
     HomeSection3,
     HomeSection4,
-    HomeSection5, 
+    HomeSection5
   },
     
 }

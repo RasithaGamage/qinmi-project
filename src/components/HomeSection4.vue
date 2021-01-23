@@ -48,7 +48,11 @@
           </v-col>
           <v-col cols="12" sm="4" xs="12">
             <div class="main-img">
-              <img src="../assets/Smart Watch.H02.2k.png" />
+              <!-- <img src="../assets/Smart Watch.H02.2k.png" /> -->
+                      <ThreeJSView/>
+                       <div class="rotateicon">
+                         <img src="../assets/360_degree_rotate-512.png"/>
+                       </div>
               <v-row>
                 <v-dialog
                   v-model="dialog"
@@ -94,6 +98,8 @@
                   </v-card>
                 </v-dialog>
               </v-row>
+
+
             </div>
           </v-col>
           <v-col cols="12" sm="4" xs="12">
@@ -143,7 +149,11 @@
   </v-layout>
 </template>
 <script>
+
+import ThreeJSView from './ThreeJSView';
+
 export default {
+  components:{ThreeJSView},
   name: "HomeSection4",
   data: () => ({
     dialog: false,
@@ -401,5 +411,21 @@ h1 {
 .card-icon-div img {
   width: inherit;
   height: auto;
+}
+canvas { 
+  outline: none  !important; border: none  !important; 
+   border-style:none;
+  }
+
+  .rotateicon{
+}
+
+.rotateicon img{
+  position: absolute;
+  bottom: 150px;
+  left: 48vw;
+  width: 50px;
+  height: auto;
+  filter: invert(99%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(100%);
 }
 </style>

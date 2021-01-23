@@ -7,13 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ZoomOnHover from "vue-zoom-on-hover";
 import VModal from 'vue-js-modal'
 
-
 library.add(faUserSecret,faPhoneVolume,faCameraRetro,faMapMarkedAlt,faSwimmer,faHandPointDown)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(ZoomOnHover)
 Vue.use(VModal, { componentName: 'MyModal' })
-
 Vue.config.productionTip = false
 
 new Vue({
